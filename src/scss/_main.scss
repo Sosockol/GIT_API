@@ -1,16 +1,59 @@
 .main {
+  width: 100%;
+  max-width: 660px;
+  box-sizing: border-box;
+  background-color: $bgColor;
+  color: $text;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 32px;
+
+  font-family: 'Comic', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+
   // .main__search
 
   &__search {
+    display: block;
+    outline-offset: 0;
+    box-sizing: border-box;
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    padding-inline: 16px;
+    padding-block: 8px;
+    border: none;
+    font-weight: bold;
+    width: 100%;
+    max-width: 320px;
+
+    &:focus {
+      outline: 1px solid black;
+    }
   }
 
   // .main__dropDown
 
   &__dropDown {
+    list-style: none;
+    margin: 0;
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 320px;
   }
 
   // .main__container
 
   &__container {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 16px;
+    width: 100%;
+    max-width: 320px;
   }
 }

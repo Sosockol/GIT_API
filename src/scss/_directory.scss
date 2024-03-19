@@ -1,7 +1,18 @@
 .directory {
+  position: relative;
+  background: #e27beb;
+  border: 1px solid black;
+  padding-inline: 8px;
+  padding-block: 4px;
+  font-size: 16px;
+  line-height: 24px;
   // .directory__propertys
 
   &__propertys {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
   }
 
   // .directory__name
@@ -22,5 +33,8 @@
   // .directory__remove
 
   &__remove {
+    position: absolute;
+    top: 8px;
+    right: 8px;
   }
 }
