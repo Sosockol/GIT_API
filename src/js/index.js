@@ -55,6 +55,7 @@ const fillDropdown = (repositorys) => {
 }
 
 const fetchDirectorys = (querry) => {
+  querry = querry.trim();
   if (!querry) {
     return new Promise(resolve => resolve([]));
   }
