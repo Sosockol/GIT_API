@@ -14,9 +14,10 @@ const createDirectory = (repository) => {
   dirStars.textContent = 'stars: ' + repository.stars;
 
   const crossButton = directory.querySelector('.directory__remove');
-  crossButton.addEventListener('click', () => {
+  crossButton.onclick = () => {
     directory.remove();
-  });
+    crossButton.onclick = '';
+  };
 
   const container = document.querySelector('.dirContainer');
   container.prepend(directory);
