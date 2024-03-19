@@ -10,7 +10,29 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 4 starter </h3>
+    <main class="main">
+      <input type="search" name="search" id="search" class="main__search" />
+      <ul class="main__dropDown dropdown">
+        <li class="dropdown__item"></li>
+        <li class="dropdown__item"></li>
+        <li class="dropdown__item"></li>
+        <li class="dropdown__item"></li>
+        <li class="dropdown__item"></li>
+      </ul>
+      <section class="main__container dirContainer">
+        <article class="dirContainer__directory directory">
+          <ul class="directory__propertys">
+            <li class="directory__name"></li>
+            <li class="directory__owner"></li>
+            <li class="directory__stars"></li>
+          </ul>
+          <button type="button" class="defaultButtton directory__remove"
+            ><div class="defaultButtton__cross"></div
+          ></button>
+        </article>
+      </section>
+    </main>
+
+    <template> </template>
   </body>
 </html>
