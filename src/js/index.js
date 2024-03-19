@@ -13,13 +13,13 @@ const createDirectory = (repository) => {
   dirOwner.textContent = 'owner: ' + repository.owner;
   dirStars.textContent = 'stars: ' + repository.stars;
 
+  const crossButton = directory.querySelector('.directory__remove');
+  crossButton.addEventListener('click', () => {
+    directory.remove();
+  });
+
   const container = document.querySelector('.dirContainer');
   container.prepend(directory);
-
-  const button = directory.querySelector('.directory__remove');
-  button.addEventListener('click', () => {
-    container.remove(directory);
-  });
 
   searchArea.value = '';
   fillDropdown([]);
@@ -99,7 +99,7 @@ let timer = 0;
 searchArea.addEventListener('keyup', (evt) => {
   function deb() {
     clearTimeout(timer);
-    timer = setTimeout(() => fetchDirectorys(searchArea.value).then(fillDropdown), 800);
+    timer = setTimeout(() => fetchDirectorys(searchArea.value).then(fillDropdown), 400);
   }
   deb();
 });
