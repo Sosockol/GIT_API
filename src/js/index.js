@@ -68,7 +68,7 @@ const fillDropdown = (repositorys) => {
 const fetchDirectorys = (querry) => {
   querry = querry.trim();
   if (!querry) {
-    return new Promise(resolve => resolve([]));
+    return new Promise(resolve => resolve(['hideDD']));
   }
 
   const directorys = fetch('https://api.github.com/search/repositories?q=' + querry + '%20in:name');
