@@ -439,16 +439,16 @@ template {
 .dirContainer__directory {
   margin-top: 8px; }
 
-.defaultButtton {
+.defaultButton {
   padding: 0;
   border: none;
   font: inherit;
   color: inherit;
   background-color: transparent;
   cursor: pointer; }
-  .defaultButtton:hover {
+  .defaultButton:hover {
     transform: scale(0.9); }
-  .defaultButtton__cross {
+  .defaultButton__cross {
     width: 35px;
     height: 30px;
     background-color: red;
