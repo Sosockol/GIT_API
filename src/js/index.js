@@ -14,16 +14,15 @@ const createDirectory = (repository) => {
   dirStars.textContent = 'stars: ' + repository.stars;
 
   const crossButton = directory.querySelector('.directory__remove');
-  crossButton.onclick = () => {
+  crossButton.addEventListener('click', () => {
     directory.remove();
-    crossButton.onclick = '';
-  };
+  }, { once: true });
 
   const container = document.querySelector('.dirContainer');
   container.prepend(directory);
 
   searchArea.value = '';
-  fillDropdown([]);
+  fillDropdown(['hideDD']);
 }
 
 const setEventListener = (element, repo) => {
@@ -41,8 +40,19 @@ const fillDropdown = (repositorys) => {
       dropdownElements[i].style.visibility = 'hidden';
       dropdownElements[i].onclick = '';
     }
+    dropdownElements[0].textContent = 'Ничего не нашлось! =(';
+    dropdownElements[0].style.visibility = 'visible';
     return;
   }
+
+  if (repositorys[0] === 'hideDD') {
+    for (let i = 0; i < 5; i++) {
+      dropdownElements[i].style.visibility = 'hidden';
+      dropdownElements[i].onclick = '';
+    }
+    return;
+  }
+
   for (let i = 0; i < 5; i++) {
     if (i >= repositorys.length) {
       dropdownElements[i].style.visibility = 'hidden';
